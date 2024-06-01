@@ -84,10 +84,15 @@ polygonSeries_v2.mapPolygons.template.events.on("click", function (ev) {
 
     // Set modal content dynamically based on clicked polygon
     var countryId = ev.target.dataItem.get("id");
-    var content = "Clicked on country with ID: " + countryId; // Customize this as needed
+    var content = ""; // Customize this as needed
+    countries.map((ele) => {
+        if (ele.id == countryId) {
+            content = ele.img
+        }
+    })
     modalBody = document.getElementsByClassName('modal-body')
-    console.log(modalBody)
-    modalBody[0].innerHTML = `<img src="./img/CN.png"></img>`
+
+    modalBody[0].innerHTML = `<img src="${content}"></img>`
     // Open the modal using jQuery
     $('#infoModal').modal('show');
 });
@@ -212,6 +217,24 @@ pointSeries.data.setAll([{
 }]);
 
 var countries = [{
+    id: "ET",
+    img: "./img/CN.png"
+}, {
+    id: "RW",
+    img: "./img/CN.png"
+}, {
+    id: "ID",
+    img: "./img/CN.png"
+}, {
+    id: "VN",
+    img: "./img/CN.png"
+}, {
+    id: "BR",
+    img: "./img/CN.png"
+}, {
+    id: "CO",
+    img: "./img/CN.png"
+}, {
     id: "CN",
     img: "./img/CN.png"
 }]
