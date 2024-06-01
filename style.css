@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    padding: 0px;
+}
+.top {
+    background-image: url(./img/banner.jpg);
+    background-position-y: 25%;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 800px;
+    padding: 0;
+}
+.foot {
+    background-image: url(./img/foot.jpg);
+    background-position-y: 90%;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+}
+.container {
+    background-color: rgba(0,0,0,0);
+}
+.bg-light {
+    background-color: rgba(0,0,0,0)!important;
+}
+nav.navbar {
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #fff;
+}
+.navbar-light .navbar-brand {
+    font-size: x-large;
+    color: #fff;
+}
+.navbar-light .navbar-brand:hover {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    font-size: large;
+    color: #fff!important;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    font-size: large;
+    color: #e9ecef!important;
+}
+h1, h2 {
+    color: #fff;
+}
+.top-container {
+    margin: 2rem 0 0 2rem!important;
+}
+.container {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    /* padding: 20px; */
+}
+
+.image-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 15px; /* 为图片之间添加间距 */
+    border-radius: 5px;
+
+}
+
+.image-wrapper img {
+    width: 100%; /* 确保图片宽度自动适应容器宽度 */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px; /* 根据图片高度调整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 0.8;
+}
+.time-line {
+    margin-top: 2rem;
+}
+.video-row {
+    margin-top: 2rem!important;
+}
+.video-title {
+    font-weight: 700;
+}
+.map-title {
+    font-size: x-large;
+    font-weight: 700;
+}
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0 2% 6%
+}
+#chartdiv {
+    right: 0;
+    overflow: hidden;
+    width: 95%;
+    height: 95vh;
+}
