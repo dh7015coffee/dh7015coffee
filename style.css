@@ -151,8 +151,11 @@ h1, h2 {
     padding: 1rem 0 0 0;
 }
 .charts-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
+}
+.charts-title-underline {
+    border-bottom: 0.2rem solid brown;
 }
 .map-charts-container {
     padding-left: 4rem;
