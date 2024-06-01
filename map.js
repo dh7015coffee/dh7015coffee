@@ -50,7 +50,7 @@ var polygonSeries = chart.series.push(
 var polygonSeries_v2 = chart.series.push(
     am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
-        include: ["ET", "RW", "ID", "VN", "BR", "CO"]
+        include: ["ET", "RW", "ID", "VN", "BR", "CO", "CN"]
     })
 );
 
@@ -85,8 +85,9 @@ polygonSeries_v2.mapPolygons.template.events.on("click", function (ev) {
     // Set modal content dynamically based on clicked polygon
     var countryId = ev.target.dataItem.get("id");
     var content = "Clicked on country with ID: " + countryId; // Customize this as needed
-    document.getElementById('modalContent').textContent = content;
-
+    modalBody = document.getElementsByClassName('modal-body')
+    console.log(modalBody)
+    modalBody[0].innerHTML = `<img src="./img/CN.png"></img>`
     // Open the modal using jQuery
     $('#infoModal').modal('show');
 });
@@ -149,6 +150,15 @@ polygonSeries_v2.data.setAll([{
         fill: am5.color(0xFF8C42),
         interactive: true,
     },
+}, {
+    id: "CN",
+    brief: `<h4>China</h4>
+            </p>Asia</p>`,
+    detail: "??",
+    polygonSettings: {
+        fill: am5.color(0xFF8C42),
+        interactive: true,
+    },
 }])
 
 var pointSeries = chart.series.push(
@@ -160,52 +170,37 @@ var pointSeries = chart.series.push(
 pointSeries.data.setAll([{
     country: "ET",
     name: "Ethiopia",
-    brief: `<h4 style='color:#000'>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: "??"
+
 }, {
     country: "RW",
     name: "Rwanda",
-    brief: `<h4>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: ""
+
 }, {
     country: "ID",
     name: "Indonesia",
-    brief: `<h4>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: ""
+
 }, {
     country: "VN",
     name: "Vietnam",
-    brief: `<h4>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: ""
+
 }, {
     country: "BR",
     name: "Brazil",
-    brief: `<h4>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: ""
+
 }, {
     country: "CO",
     name: "Colombia",
-    brief: `<h4>Main Categories:</h4>
-            <p>Arabica，Robusta，Sparrow (or Se), Catimor</p>
-            <h4>Taste Profile:</h4>
-            <p>Very little high-quality coffee is available in Vietnam, and so most tastes āat, woody, and lacks sweetness or much character.</p>`,
-    detail: ""
+
+}, {
+    country: "CN",
+    name: "China",
+
 }]);
+
+var countries = [{
+    id:"CN",
+    img:"./img/CN.png"
+}]
 
 pointSeries.bullets.push(function () {
     return am5.Bullet.new(root, {

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #fff;
-    padding: 0px;
+    padding: 0 0 17rem 0;
 }
 .top {
     background-image: url(./img/banner.jpg);
@@ -146,4 +146,46 @@ h1, h2 {
     overflow: hidden;
     width: 95%;
     height: 95vh;
+}
+.charts-title-container {
+    padding: 1rem 0 0 0;
+}
+.charts-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.map-charts-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Dark grey background */
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.footer-content p {
+    margin: 5px 0; /* Tighter spacing between lines */
+    font-size: 16px; /* Larger font size for better readability */
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .footer-content p {
+        font-size: 14px;
+    }
+}
+
+.modal-body {
+    text-align: center;
+    height: 35rem;
+    overflow: auto;
+}
+.modal-body img {
+   
 }
