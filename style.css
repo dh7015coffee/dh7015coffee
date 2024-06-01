@@ -32,25 +32,35 @@ body {
     margin: 0 0 0 2rem!important;
 }
 nav.navbar {
+    padding: 0;
     /* background-color: rgba(0,0,0,0.1);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: #fff; */
 }
-.navbar-light .navbar-brand {
-    /* font-size: x-large;
-    color: #fff; */
+.bg-light {
+    background-color: rgb(254 255 254) !important;
+}
+.navbar-brand {
+    width: 3.5rem;
+    margin-right: 25rem;
+}
+.navbar-light .navbar-brand img {
+    width: 6.5rem;
 }
 .navbar-light .navbar-brand:hover {
     /* color: #fff; */
 }
 .navbar-light .navbar-nav .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     /* font-size: large;
     color: #fff!important; */
 }
 .navbar-light .navbar-nav .nav-link:hover {
     /* font-size: large;
     color: #e9ecef!important; */
+}
+.nav-item {
+    margin: 0.5rem;
 }
 h1, h2 {
     color: #fff;
