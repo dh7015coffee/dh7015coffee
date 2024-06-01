@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Create root and chart
 var root = am5.Root.new("chartdiv", {
     tooltipContainerBounds: {
-        top: 50,
+        top: 10,
         // right: 50,
         right: 0,
         bottom: 50,
