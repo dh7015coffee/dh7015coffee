@@ -141,9 +141,9 @@ h1, h2 {
 }
 .map-container {
     width: 100%;
-    overflow: hidden;
-    margin: -5rem 0 0 0;
-    padding: 0 0.2% 0 5.2%
+    /* overflow: hidden; */
+    /* margin: -5rem 0 0 0; */
+    padding: 1% 0.2% 0 5.2%
 }
 .map-tips-container {
     padding: 1rem 0 0 0
@@ -158,10 +158,12 @@ h1, h2 {
     padding: 2px 5px; /* 内部留白 */
   }
 #chartdiv {
+    background-color: #fefefe;
     right: 0;
     overflow: hidden;
     width: 95%;
-    height: 95vh;
+    height: 35rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
 }
 .charts-row {
     padding: 0 0 2rem 0;
@@ -181,6 +183,7 @@ h1, h2 {
     font-size: 1.5rem;
 }
 .map-charts-container {
+    margin: 2rem 0 0 0;
     padding-left: 4rem;
     padding-right: 4rem;
 }
