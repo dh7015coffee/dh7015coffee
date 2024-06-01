@@ -4,14 +4,16 @@ body {
     background-color: #fff;
     /* padding: 0 0 15rem 0; */
 }
-.top {
+.img-container {
     background-image: url(./img/banner.png);
     background-position-y: 25%;
     background-size: cover;
     display: block;
     width: 100%;
-    height: 800px;
     padding: 0;
+}
+.img-container img {
+    width: 100%;
 }
 .foot {
     background-image: url(./img/foot.jpg);
@@ -141,6 +143,18 @@ h1, h2 {
     overflow: hidden;
     padding: 0 0 2% 6%
 }
+.map-tips-container {
+    padding: 1rem 0 0 0
+}
+.map-tips-container::after {
+    content: "click on map"; /* 文字内容 */
+    position: absolute; /* 绝对定位 */
+    bottom: 5px; /* 底部距离 */
+    right: 5px; /* 右侧距离 */
+    color: rgba(26, 115, 232, 1);
+    background-color: rgba(255, 255, 255, 0.5); /* 文字背景色，半透明 */
+    padding: 2px 5px; /* 内部留白 */
+  }
 #chartdiv {
     right: 0;
     overflow: hidden;

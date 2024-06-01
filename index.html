@@ -40,8 +40,8 @@
             </div>
         </div>
     </nav>
-    <div class="top">
-
+    <div class="img-container">
+        <img src="./img/banner.png" alt="">
     </div>
 
     <!-- 页面内容 -->
@@ -119,8 +119,12 @@
         </div>
     </div>
 
-    <div id="embed-iframe"></div>
-    <button class="floating-button" onclick="handlePlayPause()">play/pulse</button>
+    <!-- <div id="embed-iframe"></div> -->
+    <iframe id="spotifyPlayer"
+        style="border-radius:12px; width: 15rem; height: 6rem; position: fixed; z-index: 999; bottom: 0.1rem; left: 1rem;transition: bottom 0.5s ease;"
+        src="https://open.spotify.com/embed/track/0mVS2trjaMEQvdtkIFCCHK?utm_source=generator" width="100%" height="352"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <footer>
         <div class="footer-content">
             <p>Designed by the Universiti Malaya MLIS</p>
@@ -138,21 +142,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
     <script>
-        var playing = true;
+        const floatingDiv = document.getElementById('spotifyPlayer');
+        const liftDistance = '15rem'; // 抬升距离
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                // 页面滚动到底部
+                floatingDiv.style.bottom = liftDistance; // 抬升 Div
+            } else {
+                // 页面未到底部
+                floatingDiv.style.bottom = '0'; // 回到原始位置
+            }
+        });
+        // var playing = true;
 
-        const handlePlayPause = () => {
-            const iframe = document.getElementById("spotifyPlayer");
-            const player = iframe.contentWindow.document.querySelector(".spotifyPlayer");
-            player.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-        };
-        window.onSpotifyIframeApiReady = (IFrameAPI) => {
-            const element = document.getElementById('embed-iframe');
-            const options = {
-                uri: 'spotify:track:0mVS2trjaMEQvdtkIFCCHK'
-            };
-            const callback = (EmbedController) => { };
-            IFrameAPI.createController(element, options, callback);
-        };
+        // window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        //     const element = document.getElementById('embed-iframe');
+        //     const options = {
+        //         uri: 'spotify:track:0mVS2trjaMEQvdtkIFCCHK'
+        //     };
+        //     const callback = (EmbedController) => { };
+        //     IFrameAPI.createController(element, options, callback);
+        // };
+
     </script>
 </body>
 

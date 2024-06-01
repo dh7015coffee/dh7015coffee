@@ -99,16 +99,20 @@ polygonSeries_v2.mapPolygons.template.events.on("click", function (ev) {
 
 polygonSeries_v2.data.setAll([{
     id: "ET",
-    brief: `<h4>Ethiopia</h4>
-            <p>Africa</p>`, detail: "??",
+    brief: `<div class='map-tips-container'>
+            <h4>Ethiopia</h4>
+            <p>Africa</p>
+            </div>`, detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
         interactive: true
     },
 }, {
     id: "RW",
-    brief: `<h4>Rwanda</h4>
-            <p>Africa</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>Rwanda</h4>
+            <p>Africa</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -116,8 +120,10 @@ polygonSeries_v2.data.setAll([{
     }
 }, {
     id: "ID",
-    brief: `<h4>Indonesia</h4>
-            <p>Asia</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>Indonesia</h4>
+            <p>Asia</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -125,8 +131,10 @@ polygonSeries_v2.data.setAll([{
     },
 }, {
     id: "VN",
-    brief: `<h4>Vietnam</h4>
-            <p>Asia</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>Vietnam</h4>
+            <p>Asia</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -134,8 +142,10 @@ polygonSeries_v2.data.setAll([{
     },
 }, {
     id: "BR",
-    brief: `<h4>Brazil</h4>
-            <p>America</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>Brazil</h4>
+            <p>America</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -143,8 +153,10 @@ polygonSeries_v2.data.setAll([{
     },
 }, {
     id: "CO",
-    brief: `<h4>Colombia</h4>
-            </p>America</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>Colombia</h4>
+            </p>America</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -152,8 +164,10 @@ polygonSeries_v2.data.setAll([{
     },
 }, {
     id: "CN",
-    brief: `<h4>China</h4>
-            </p>Asia</p>`,
+    brief: `<div class='map-tips-container'>
+            <h4>China</h4>
+            </p>Asia</p>
+            </div>`,
     detail: "??",
     polygonSettings: {
         fill: am5.color(0xFF8C42),
@@ -198,8 +212,8 @@ pointSeries.data.setAll([{
 }]);
 
 var countries = [{
-    id:"CN",
-    img:"./img/CN.png"
+    id: "CN",
+    img: "./img/CN.png"
 }]
 
 pointSeries.bullets.push(function () {
