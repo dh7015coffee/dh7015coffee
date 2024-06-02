@@ -158,12 +158,12 @@ h1, h2 {
     padding: 2px 5px; /* 内部留白 */
   }
 #chartdiv {
-    background-color: #fefefe;
+    /* background-color: #fefefe; */
     right: 0;
     overflow: hidden;
     width: 95%;
     height: 35rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) */
 }
 .charts-row {
     padding: 0 0 2rem 0;
