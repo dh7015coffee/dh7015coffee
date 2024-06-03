@@ -50,7 +50,7 @@ var polygonSeries = chart.series.push(
 var polygonSeries_v2 = chart.series.push(
     am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
-        include: ["ET", "RW", "ID", "VN", "BR", "CO", "CN"]
+        include: ["ET", "RW", "ID", "VN", "BR", "CO", "CN", "TW"]
     })
 );
 
@@ -70,7 +70,7 @@ polygonSeries_v2.mapPolygons.template.setAll({
                 padding: 0px 0px 20px 20px;
                 text-align: justify'>{brief}</div>`,
     templateField: "polygonSettings",
-    interactive: true, // Disable interaction
+    // interactive: true, // Disable interaction
     fill: am5.color(0xFF8C42), // Grey color
     callbk: () => { console.log(name) }
 });
@@ -177,6 +177,17 @@ polygonSeries_v2.data.setAll([{
     polygonSettings: {
         fill: am5.color(0xFF8C42),
         interactive: true,
+    },
+}, {
+    id: "TW",
+    brief: `<div class='map-tips-container'>
+            <h4>China</h4>
+            </p>Asia</p>
+            </div>`,
+    detail: "??",
+    polygonSettings: {
+        fill: am5.color(0xFF8C42),
+        interactive: false,
     },
 }])
 
