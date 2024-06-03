@@ -250,16 +250,16 @@ var countries = [{
     img: "./img/CN.png"
 }]
 
-pointSeries.bullets.push(function () {
-    return am5.Bullet.new(root, {
-        sprite: am5.Label.new(root, {
-            centerX: am5.p50,
-            centerY: am5.p50,
-            html: `<div onclick='test()'><h3 id='{name}'>{name}</h3></div>`,
-            populateText: true
-        })
-    });
-});
+// pointSeries.bullets.push(function () {
+//     return am5.Bullet.new(root, {
+//         sprite: am5.Label.new(root, {
+//             centerX: am5.p50,
+//             centerY: am5.p50,
+//             html: `<div onclick='test()'><h2 id='{name}'>{name}</h2></div>`,
+//             populateText: true
+//         })
+//     });
+// });
 
 function test() {
     console.log('param')
