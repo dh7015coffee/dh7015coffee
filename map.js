@@ -50,7 +50,7 @@ var polygonSeries = chart.series.push(
 var polygonSeries_v2 = chart.series.push(
     am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
-        include: ["ET", "RW", "ID", "VN", "BR", "CO", "CN", "TW", "KE", "MW", "HT", "PE", "CG", "IN", "TZ", "HN", "BO", "ZM", "GT", "TH", "US", "BI", "UG", "VE", "PH", "JM", "MX", "PG", "YE", "PA", "NI"]
+        include: ["ET", "RW", "ID", "VN", "BR", "CO", "CN", "TW", "KE", "MW", "HT", "PE", "CG", "IN", "TZ", "HN", "BO", "ZM", "GT", "TH", "US", "BI", "UG", "VE", "PH", "JM", "MX", "PG", "YE", "PA", "NI", "CR", "DO", "EC", "SV"]
 
     })
 );
@@ -212,7 +212,12 @@ polygonSeries_v2.data.setAll([{
 { id: "PG", brief: `<div class='map-tips-container'><h5>Papua New Guinea</h5><p>Oceania</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
 { id: "YE", brief: `<div class='map-tips-container'><h4>Yemen</h4><p>Asia</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
 { id: "PA", brief: `<div class='map-tips-container'><h4>Panama</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
-{ id: "NI", brief: `<dic class='map-tips-container'><h4>Nicaragua</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } }
+{ id: "NI", brief: `<dic class='map-tips-container'><h4>Nicaragua</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
+{ id: "CR", brief: `<dic class='map-tips-container'><h4>Costa Rica</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
+{ id: "CU", brief: `<dic class='map-tips-container'><h4>Cuba</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
+{ id: "DO", brief: `<dic class='map-tips-container'><h4>Dominican Republic</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
+{ id: "EC", brief: `<dic class='map-tips-container'><h4>Ecuador</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } },
+{ id: "SV", brief: `<dic class='map-tips-container'><h4>El Salvador</h4><p>Americas</p></div>`, detail: "??", polygonSettings: { fill: am5.color(0xFF8C42), interactive: true } }
 ])
 
 var pointSeries = chart.series.push(
@@ -251,7 +256,12 @@ pointSeries.data.setAll([
     { country: "PG", name: "Papua New Guinea" },
     { country: "YE", name: "Yemen" },
     { country: "PA", name: "Panama" },
-    { country: "NI", name: "Nicaragua" }
+    { country: "NI", name: "Nicaragua" },
+    { country: "CR", name: "Costa Rica" },
+    { country: "CU", name: "Cuba" },
+    { country: "DO", name: "Dominican Republic" },
+    { country: "EC", name: "Ecuador" },
+    { country: "SV", name: "El Salvador" }
 ]);
 
 var countries = [{
@@ -347,6 +357,21 @@ var countries = [{
 }, {
     id: "TW",
     img: "./img/CN.png"
+}, {
+    id: "CR",
+    img: "./img/CR.jpg"
+}, {
+    id: "CU",
+    img: "./img/CU.jpg"
+}, {
+    id: "DO",
+    img: "./img/DO.jpg"
+}, {
+    id: "EC",
+    img: "./img/EC.jpg"
+}, {
+    id: "SV",
+    img: "./img/SV.jpg"
 }];
 
 // pointSeries.bullets.push(function () {
