@@ -193,6 +193,9 @@ h1, h2 {
 .market-text ul li {
     text-align: justify;
 }
+.coffee-word-cloud {
+    width: 100%;
+}
 footer {
     /* position: fixed; */
     left: 0;
